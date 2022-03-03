@@ -7,7 +7,7 @@
     --title-color: rgb(232, 191, 106);
     */
     --title-color: rgb(127, 156, 81);
-    --title-border-color: rgb(78, 82, 44);
+    --title-border-color: rgb(232, 191, 106);
 
     --title-font-family: "Open Sans","Lucida Grande","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
     --text-font-family: Arial, serif;
@@ -23,6 +23,7 @@
     --position-title-color: rgb(20, 50, 50);
 
     --caption-color: rgb(20, 50, 50);
+
 }
 
 body {
@@ -32,7 +33,7 @@ body {
 
     font-style:normal;
     font-family: var(--text-font-family);
-    font-size: 1.4rem;
+    font-size: var(--font-size-lg);
 
     display: flex;
     flex-direction: column;
@@ -51,8 +52,7 @@ h1 {
 }
 h2 {
     color: var(--title-color);
-    border-bottom-color: var(--title-border-color);
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid var(--title-border-color);
 
 }
 
@@ -95,10 +95,10 @@ h2 {
 }
 
 .text-sm {
-    font-size: 1rem;
+    font-size: var(--font-size-sm);
 }
 .text-md {
-    font-size: 1.2rem;
+    font-size: var(--font-size-md);
 }
 .history-row {
     margin-left: 1rem;
@@ -120,7 +120,7 @@ h2 {
     gap: 7px;
 }
 .company-title-name {
-    font-size: 1.2rem;
+    font-size: var(--font-size-md);
     font-weight: bold;
     font-family: var(--title-font-family);
     color: var(--company-title-color);
@@ -137,7 +137,7 @@ h2 {
     margin-left: 48px;
 }
 .position-title-name {
-    font-size: 1.2rem;
+    font-size: var(--font-size-md);
     font-weight: bold;
     font-family: var(--title-font-family);
     color: var(--position-title-color);
@@ -206,3 +206,34 @@ a:active {
     display: inline-block;
 }
 
+.contact-area {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.small-icon {
+    max-width: 12px;
+}
+
+@media (max-width: 800px){
+    :root {
+        --font-size-sm: 2.2rem;
+        --font-size-md: 2.4rem;
+        --font-size-lg: 2.6rem;
+    }
+    .face {
+        display: none;
+    }
+    .contact-area {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 800px) {
+    :root {
+        --font-size-sm: 1.4rem;
+        --font-size-md: 1.6rem;
+        --font-size-lg: 1.8rem;
+    }
+}
