@@ -237,3 +237,19 @@ a:active {
         --font-size-lg: 1.8rem;
     }
 }
+
+@media only print {
+    :root {
+        --font-size-sm: 0.6rem;
+        --font-size-md: 0.8rem;
+        --font-size-lg: 1.0rem;
+    }
+    .grid {
+        grid-template-areas:
+      "ph ph ph hd hd hd hd hd hd"
+      "ct ct ct ct ct ct ct ct ct";
+    }
+    .face {
+        display: block;
+    }
+}
