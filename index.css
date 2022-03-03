@@ -32,11 +32,16 @@ body {
 
     font-style:normal;
     font-family: var(--text-font-family);
-    font-size:16px;
+    font-size: 1.4rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 h1, h2 {
     font-family: var(--title-font-family);
@@ -48,6 +53,7 @@ h2 {
     color: var(--title-color);
     border-bottom-color: var(--title-border-color);
     border-bottom: 1px solid #eaeaea;
+
 }
 
 .grid {
@@ -58,6 +64,12 @@ h2 {
       "ph ph hd hd hd hd hd hd hd"
       "ct ct ct ct ct ct ct ct ct";
     max-width: 800px;
+    margin-top: 1rem;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 0.7rem;
 }
 .cell-photo {
     grid-area: ph;
@@ -72,24 +84,25 @@ h2 {
 }
 
 .form-row {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.8rem;
 }
 .skill {
     margin: 2px;
     background-color: var(--skill-bg-color);
-    padding: 0.2em;
-    border-radius: 0.5em;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
     display: inline-block;
 }
 
 .text-sm {
-    font-size: 12px;
+    font-size: 1rem;
 }
 .text-md {
-    font-size: 16px;
+    font-size: 1.2rem;
 }
 .history-row {
-    margin-left: 20px;
+    margin-left: 1rem;
+    margin-top: 1rem;
 }
 .company {
     display: flex;
@@ -107,7 +120,7 @@ h2 {
     gap: 7px;
 }
 .company-title-name {
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: bold;
     font-family: var(--title-font-family);
     color: var(--company-title-color);
@@ -121,10 +134,10 @@ h2 {
     color: var(--caption-color);
 }
 .project-row {
-    margin-left: calc(48px + 20px);
+    margin-left: 48px;
 }
 .position-title-name {
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: bold;
     font-family: var(--title-font-family);
     color: var(--position-title-color);
@@ -143,6 +156,9 @@ h2 {
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+}
+.pet-p {
+    margin-top: 0.5rem;
 }
 
 
@@ -176,16 +192,17 @@ a:active {
 
 
 .section {
-    margin: 20px;
-    margin-left: 3em;
+    margin-left: 3rem;
+    margin-top: 4rem;
 }
 .col-name {
-    width: 25%;
     display: inline-block;
     font-weight: bold;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .col-value {
-    width: 70%;
     display: inline-block;
 }
 
