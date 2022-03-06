@@ -214,6 +214,9 @@ a:active {
 .small-icon {
     max-width: 12px;
 }
+.md-icon {
+    max-width: 18px;
+}
 
 @media (max-width: 800px){
     :root {
