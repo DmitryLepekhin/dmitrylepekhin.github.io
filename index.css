@@ -49,11 +49,16 @@ h1, h2 {
 }
 h1 {
     color: var(--main-title-color);
+    font-size: 1.7em;
 }
 h2 {
     color: var(--title-color);
     border-bottom: 1px solid var(--title-border-color);
+    padding-bottom: 0.2em;
+}
 
+.expand-width {
+    width: 100%;
 }
 
 .grid {
@@ -61,7 +66,7 @@ h2 {
     grid-template-columns: repeat(9, 1fr);
     grid-auto-rows: minmax(100px, auto);
     grid-template-areas:
-      "ph ph hd hd hd hd hd hd hd"
+      "ph ph ph ph hd hd hd hd hd"
       "ct ct ct ct ct ct ct ct ct";
     max-width: 800px;
     margin-top: 1rem;
@@ -73,6 +78,10 @@ h2 {
 }
 .cell-photo {
     grid-area: ph;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 .cell-header {
     grid-area: hd;
@@ -146,9 +155,10 @@ h2 {
 .position-row {
     margin-bottom: 15px;
 }
+
 .face {
-    max-width: 192px;
-    max-height: 192px;
+    max-width: 350px;
+    max-height: 350px;
     margin: 10px;
     margin-top: 15px;
 }
@@ -210,11 +220,11 @@ a:active {
 
 .contact-area {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 15px;
 }
 .small-icon {
-    max-width: 12px;
+    max-width: 18px;
 }
 .md-icon {
     max-width: 18px;
@@ -248,10 +258,15 @@ a:active {
         --font-size-sm: 0.6rem;
         --font-size-md: 0.8rem;
         --font-size-lg: 1.0rem;
+
+        --main-title-color: rgb(112, 147, 55);
+        --title-color: rgb(112, 147, 55);
+        --title-border-color: rgb(232, 191, 106);
+
     }
     .grid {
         grid-template-areas:
-      "ph ph ph hd hd hd hd hd hd"
+      "ph ph ph ph hd hd hd hd hd"
       "ct ct ct ct ct ct ct ct ct";
     }
     .face {
