@@ -255,7 +255,7 @@ a:active {
 
 @media only print {
     :root {
-        --font-size-sm: 0.6rem;
+        --font-size-sm: 0.8rem;
         --font-size-md: 0.8rem;
         --font-size-lg: 1.0rem;
 
